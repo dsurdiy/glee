@@ -4,6 +4,81 @@
 @import "global";
 
 
+.header {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 45px 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  margin: 0 auto;
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+  &__link {
+    font-size: 15px;
+    line-height: 12px;
+    color: #436372;
+    @extend %rubik-500;
+  }
+}
+
+.user-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  &__search {
+    padding: 18px;
+    border-radius: 50%;
+    background-color: #edf1f4;
+  }
+  &__inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 178px;
+    padding: 20px 40px 14px;
+    background-color: $bg;
+    border-radius: 25px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 1px;
+      height: 32px;
+      background-color: #fde7d3;
+    }
+  }
+  &__heart,
+  &__basket {
+    position: relative;
+  }
+  &__num {
+    position: absolute;
+    top: -9px;
+    right: -9px;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    color: $title;
+    font-size: 10px;
+    line-height: 17px;
+  }
+  &__menu {
+    padding: 15px;
+    border-radius: 50%;
+    background-color: #a3bbc8;
+  }
+}
+
 
 
 
