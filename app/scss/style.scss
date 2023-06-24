@@ -14,7 +14,6 @@
 }
 
 .menu {
-  margin: 0 auto;
   &__list {
     display: flex;
     gap: 30px;
@@ -76,6 +75,86 @@
     padding: 15px;
     border-radius: 50%;
     background-color: #a3bbc8;
+  }
+}
+
+.footer {
+  @extend %rubik-400;
+  font-size: 14px;
+  color: $footer-text;
+  &__logo {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 70px 0;
+  border-bottom: 1px solid #dae4e9;
+  &__contact {
+    width: 200px;
+  }
+  &__address,
+  &__phone {
+    display: block;
+    margin-bottom: 10px;
+  }
+  &__title {
+    font-size: 16px;
+    line-height: 21px;
+    color: #1f2044;
+    @extend %dmsans-700;
+    text-transform: uppercase;
+    margin: 13px 0 20px;
+  }
+  &__link {
+    line-height: 32px;
+  }
+  &__item-form {
+    width: 270px;
+  }
+  &__text {
+    margin-bottom: 30px;
+  }
+  &__form {
+    width: 100%;
+    display: flex;
+    font-size: 12px;
+  }
+  &__form-input {
+    width: 170px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #fef7f0;
+    &::placeholder {
+      color: #234969;
+    }
+  }
+  &__form-btn {
+    width: 100px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #a3bbc8;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 35px 0;
+  line-height: 32px;
+  &__menu {
+    display: flex;
+  }
+  &__menu-item + &__menu-item::before {
+    content: "|";
+  }
+  &__link {
+    padding: 0 15px;
   }
 }
 
