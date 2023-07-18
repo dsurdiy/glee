@@ -4,7 +4,6 @@
 @import "libs";
 @import "global";
 
-
 .header {
   &__inner {
     max-width: 1800px;
@@ -161,7 +160,79 @@
   }
 }
 
-
-
+.top-slider {
+  &__wrapper {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 210px 0 40px;
+    background-image: url("../images/top-slider-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 80px;
+  }
+  &__item {
+    display: flex !important;
+    justify-content: space-between;
+  }
+  &__content {
+    max-width: 415px;
+  }
+  &__title {
+    @extend %rubik-500;
+    font-size: 72px;
+    line-height: 70px;
+    color: $title;
+    margin-bottom: 40px;
+  }
+  &__text {
+    @extend %rubik-400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #436372;
+    margin-bottom: 35px;
+  }
+  &__link {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    padding: 22px 25px;
+    background-color: $accent;
+    @extend %rubik-500;
+    font-size: 15px;
+    color: #ffffff;
+    &::after {
+      content: "";
+      position: absolute;
+      right: 20px;
+      top: 29px;
+      width: 22px;
+      height: 9px;
+      background-image: url("../images/icons/arrow-right.svg");
+    }
+  }
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    @extend %rubik-500;
+    font-size: 11px;
+    button {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: none;
+      background-color: #fde3cc;
+      color: $title;
+    }
+    .slick-active button {
+      background-color: #ffffff;
+    }
+  }
+}
 
 @import "media";
