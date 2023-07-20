@@ -7,7 +7,6 @@ const browserSync = require("browser-sync").create();
 const imagemin = require("gulp-imagemin");
 const del = require("del");
 
-
 function browsersync() {
   browserSync.init({
     server: {
@@ -33,10 +32,11 @@ function styles() {
 
 function scripts() {
   return src([
-      "node_modules/jquery/dist/jquery.js",
-      "node_modules/slick-carousel/slick/slick.js",
-      "app/js/main.js"
-    ])
+    "node_modules/jquery/dist/jquery.js",
+    "node_modules/slick-carousel/slick/slick.js",
+    "node_modules/mixitup/dist/mixitup.js",
+    "app/js/main.js",
+  ])
     .pipe(concat("main.min.js"))
     .pipe(uglify())
     .pipe(dest("app/js"))
@@ -59,15 +59,9 @@ function images() {
 }
 
 function build() {
-  return src(
-    [ "app/**/*.html",
-      "app/css/style.min.css",
-      "app/js/main.min.js",
-    ], 
-    { 
-      base: "app" 
-    })
-    .pipe(dest("dist"));
+  return src(["app/**/*.html", "app/css/style.min.css", "app/js/main.min.js"], {
+    base: "app",
+  }).pipe(dest("dist"));
 }
 
 function cleanDist() {
@@ -79,7 +73,6 @@ function watching() {
   watch(["app/js/**/*.js", "!app/js/main.min.js"], scripts);
   watch(["app/**/*.html"]).on("change", browserSync.reload);
 }
-
 
 exports.styles = styles;
 exports.scripts = scripts;

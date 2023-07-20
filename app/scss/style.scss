@@ -255,8 +255,18 @@
       border-left: 1px solid #e8e4df;
     }
   }
-  &__icon {
+  &__image {
+    position: relative;
     margin-top: 10px;
+    &::after {
+      content: "";
+      position: absolute;
+      right: -5px;
+      bottom: -7px;
+      width: 20px;
+      height: 21px;
+      background-image: url("../images/icons/features/ellipse.svg");
+    }
   }
   &__content {
     width: 230px;
@@ -265,11 +275,94 @@
     @extend %dmsans-700;
     font-size: 18px;
     line-height: 40px;
-    color: #191919;
+    color: $secondary-title;
   }
   &__text {
     @extend %dmsans-400;
     line-height: 30px;
+  }
+}
+
+.week-products {
+  padding: 60px 0;
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px 35px;
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 270px;
+    min-height: 380px;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    text-align: center;
+    &:hover .week-products__link-box {
+      transform: scale(1);
+    }
+  }
+  &__image {
+    margin-top: auto;
+  }
+  &__title {
+    margin-top: auto;
+    @extend %dmsans-500;
+    color: $title;
+    line-height: 40px;
+  }
+  &__price {
+    @extend %dmsans-700;
+    color: $accent;
+  }
+  &__link-box {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    bottom: 150px;
+    transform: scale(0);
+    transition: all 0.3s;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: 13px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transition: all 0.3s;
+    path {
+      transition: all 0.3s;
+    }
+    &:hover {
+      background-color: $accent;
+      path {
+        fill: #ffffff;
+      }
+    }
+  }
+}
+
+.filter {
+  text-align: center;
+  margin-bottom: 70px;
+  &__btn {
+    @extend %dmsans-700;
+    color: #8b8b8b;
+    border: none;
+    padding: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+    & + & {
+      margin-left: 15px;
+    }
+    &.mixitup-control-active {
+      color: $secondary-title;
+    }
   }
 }
 
