@@ -21,3 +21,11 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.title {
+  text-align: center;
+  @extend %dmsans-700;
+  font-size: 36px;
+  color: $secondary-title;
+  margin-bottom: 30px;
+}

@@ -3,4 +3,6 @@ $(function () {
     arrows: false,
     dots: true,
   });
+
+  const mixer = mixitup(".week-products__list");
 });
