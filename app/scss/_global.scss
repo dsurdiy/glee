@@ -30,3 +30,39 @@ body {
   color: $secondary-title;
   margin-bottom: 30px;
 }
+
+.page-top {
+  padding: 30px;
+  text-align: center;
+  background-color: $top-bg;
+  color: #222933;
+  &__title {
+    @extend %rubik-300;
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+}
+
+.breadcrumps {
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  &__item {
+    position: relative;
+    opacity: 0.6;
+    @extend %rubik-400;
+    font-size: 14px;
+    &::after {
+      content: "/";
+      position: absolute;
+      right: -13px;
+    }
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
