@@ -45,3 +45,11 @@ $top-bg: #edf1f4;
   font-family: "Poppins-Bold", sans-serif;
   font-weight: 700;
 }
+
+%checkbox-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
