@@ -12,10 +12,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
   }
 }
 
 .menu {
+  &__btn {
+    display: none;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
   &__list {
     display: flex;
     gap: 30px;
