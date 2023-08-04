@@ -1,3 +1,73 @@
+@media (max-width: 1600px) {
+  .catalog {
+    &__item {
+      padding: 15px;
+    }
+  }
+}
+
+@media (max-width: 1350px) {
+  .catalog {
+    &__img {
+      position: static;
+      max-width: 170px;
+      margin-right: 20px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .top-slider {
+    &__wrapper {
+      padding: 140px 0 40px;
+    }
+    &__title {
+      font-size: 60px;
+      line-height: 64px;
+      margin-bottom: 30px;
+    }
+    &__img {
+      max-width: 55%;
+      object-fit: contain;
+    }
+  }
+  .week-products {
+    &__list {
+      gap: 20px;
+    }
+    &__item {
+      min-height: auto;
+    }
+  }
+  .filter {
+    margin-bottom: 35px;
+  }
+  .catalog {
+    padding: 0 0 60px;
+    &__inner {
+      gap: 20px;
+    }
+    &__item {
+      height: auto;
+      padding: 50px 15px;
+    }
+    &__img {
+      max-width: 100px;
+      margin-right: 40px;
+    }
+    &__content {
+      width: 100%;
+    }
+    &__title {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+    &__text {
+      margin-bottom: 20px;
+    }
+  }
+}
+
 @media (max-width: 1000px) {
   .user-nav {
     width: 100%;
@@ -13,17 +83,90 @@
       padding: 9px;
     }
   }
+  .top-slider {
+    &__content {
+      max-width: 350px;
+    }
+    &__title {
+      font-size: 40px;
+      line-height: 46px;
+    }
+  }
+  .features {
+    padding: 15px 0;
+    &__list {
+      flex-wrap: wrap;
+    }
+    &__item {
+      min-width: 320px;
+      height: auto;
+      & + & {
+        border-left: none;
+      }
+    }
+  }
+  .catalog {
+    &__inner {
+      display: block;
+    }
+    &__item {
+      justify-content: center;
+      gap: 50px;
+      & + & {
+        margin-top: 10px;
+      }
+    }
+    &__content {
+      width: 320px;
+      margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: 830px) {
+  .title {
+    margin-bottom: 20px;
+  }
+  .top-slider {
+    &__wrapper {
+      padding: 100px 0 40px;
+      background-position: right;
+    }
+    &__content {
+      max-width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .slick-slide img {
+      display: none;
+    }
+  }
+  .week-products {
+    padding: 40px 0;
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &__item {
+      padding: 15px;
+    }
+  }
+  .catalog {
+    padding-bottom: 40px;
+  }
 }
 
 @media (max-width: 680px) {
   .header {
     position: relative;
+    &__inner {
+      padding: 20px 15px 20px;
+    }
   }
   .menu {
     order: 1;
     &__list {
       position: absolute;
-      top: 120px;
+      top: 80px;
       left: 0;
       z-index: 10;
       width: 100%;
@@ -32,7 +175,7 @@
       gap: 10px;
       padding: 20px 0;
       background-color: $accent;
-      transform: translateX(100%);
+      transform: translateX(-100%);
       transition: all 0.5s;
       &--active {
         transform: translateX(0);
@@ -52,18 +195,99 @@
     width: auto;
     margin-top: 0;
   }
+  .features {
+    &__item {
+      min-width: 100%;
+      & + & {
+        border-top: 1px solid #e8e4df;
+      }
+    }
+    &__image {
+      margin-top: 0;
+    }
+    &__title {
+      margin-bottom: 0;
+    }
+    &__text {
+      line-height: 24px;
+    }
+  }
+  .week-products {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+  }
 }
 
 @media (max-width: 570px) {
+  .title {
+    font-size: 32px;
+    line-height: 34px;
+  }
   .menu {
     order: 0;
     &__list {
-      top: 170px;
+      top: 139px;
     }
   }
   .user-nav {
     width: 100%;
     margin-top: 20px;
-    justify-content: flex-end;
+    justify-content: center;
+  }
+  .top-slider {
+    &__title {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+    &__text {
+      margin-bottom: 20px;
+    }
+    &__link {
+      padding: 15px;
+      &::after {
+        top: 22px;
+      }
+    }
+  }
+  .catalog {
+    &__item {
+      flex-direction: column;
+      gap: 25px;
+      padding: 25px 15px;
+    }
+    &__img {
+      margin-right: 0;
+    }
+    &__content {
+      width: auto;
+      text-align: center;
+    }
+    &__link {
+      text-align: left;
+    }
+  }
+}
+
+@media (max-width: 475px) {
+  .week-products {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+  }
+  .filter {
+    margin-bottom: 20px;
+  }
+  .catalog {
+    &__img {
+      max-width: 70px;
+    }
+    &__link {
+      padding: 10px;
+      &::after {
+        top: 20px;
+      }
+    }
   }
 }
