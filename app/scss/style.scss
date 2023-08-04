@@ -253,19 +253,19 @@
   }
   &__item {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     height: 170px;
     flex-basis: 33.33%;
     gap: 25px;
-    padding: 40px 100px;
+    padding: 15px;
     & + & {
       border-left: 1px solid #e8e4df;
     }
   }
   &__image {
     position: relative;
-    margin-top: 10px;
+    margin-top: -30px;
     &::after {
       content: "";
       position: absolute;
@@ -282,8 +282,8 @@
   &__title {
     @extend %dmsans-700;
     font-size: 18px;
-    line-height: 40px;
     color: $secondary-title;
+    margin-bottom: 10px;
   }
   &__text {
     @extend %dmsans-400;
@@ -303,7 +303,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 270px;
     min-height: 380px;
     padding: 30px 20px;
     border-radius: 10px;
@@ -394,7 +393,7 @@
   }
   &__img {
     position: absolute;
-    left: 10%;
+    left: 50px;
     bottom: 80px;
   }
   &__content {
