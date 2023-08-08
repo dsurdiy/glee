@@ -92,6 +92,62 @@
   .footer-bottom {
     padding: 20px 0;
   }
+  .page-top {
+    padding: 20px;
+  }
+  .mission {
+    padding: 60px 0;
+    &__inner {
+      align-items: center;
+    }
+    &__img {
+      width: 400px;
+    }
+    &__content {
+      padding: 0;
+    }
+    &__experience {
+      width: 260px;
+      align-items: center;
+    }
+    &__years {
+      font-size: 100px;
+      line-height: 116px;
+    }
+    &__experience-text {
+      margin-top: 0;
+    }
+    &__title {
+      margin-bottom: 20px;
+    }
+    &__text {
+      padding-bottom: 40px;
+    }
+    &__achievements-list {
+      gap: 30px;
+    }
+    &__achievements-item {
+      &::after {
+        right: -15px;
+      }
+    }
+    &__achievements-num {
+      display: block;
+    }
+  }
+  .statistics {
+    padding: 60px 0;
+  }
+  .team {
+    padding: 60px 0;
+    &__inner {
+      gap: 30px;
+    }
+    &__item-box {
+      width: 100%;
+      padding: 20px;
+    }
+  }
 }
 
 @media (max-width: 1000px) {
@@ -188,6 +244,57 @@
       bottom: auto;
     }
   }
+  .mission {
+    &__img {
+      width: 330px;
+    }
+    &__experience {
+      width: 220px;
+      gap: 20px;
+    }
+    &__years {
+      font-size: 70px;
+      line-height: 86px;
+    }
+    &__experience-text {
+      margin-top: 0;
+      line-height: inherit;
+    }
+    &__achievements-num {
+      font-size: 22px;
+      line-height: 24px;
+    }
+    &__achievements-item {
+      padding-left: 50px;
+      &::before {
+        top: 3px;
+      }
+      &::after {
+        height: 60px;
+      }
+    }
+  }
+  .statistics {
+    &__list {
+      flex-wrap: wrap;
+      gap: 15px 35px;
+    }
+    &__number {
+      font-size: 28px;
+      margin-bottom: 0;
+    }
+  }
+  .team {
+    &__list {
+      gap: 80px 30px;
+    }
+    &__item-box {
+      padding: 10px;
+    }
+    &__item-title {
+      margin-bottom: 0;
+    }
+  }
 }
 
 @media (max-width: 830px) {
@@ -249,6 +356,86 @@
     flex-wrap: wrap;
     gap: 30px;
     padding: 40px 0;
+  }
+  .page-top {
+    padding: 15px;
+    &__title {
+      font-size: 28px;
+      line-height: 30px;
+      margin-bottom: 5px;
+    }
+  }
+  .mission {
+    padding: 40px 0;
+    text-align: center;
+    &__img {
+      display: none;
+    }
+    &__experience {
+      margin: 0 auto 15px;
+    }
+    &__years {
+      font-size: 85px;
+    }
+    &__title {
+      font-size: 28px;
+      line-height: 32px;
+      margin-bottom: 15px;
+    }
+    &__text {
+      padding-bottom: 20px;
+      line-height: inherit;
+      &::after {
+        width: 100%;
+      }
+    }
+    &__achievements-list {
+      justify-content: center;
+    }
+  }
+  .statistics {
+    padding: 40px 0;
+    &__img-box {
+      width: 45px;
+      height: 45px;
+      margin-bottom: 10px;
+      &::after {
+        width: 15px;
+        height: 15px;
+        bottom: -3px;
+      }
+    }
+    &__number {
+      font-size: 20px;
+    }
+    &__text {
+      font-size: 16px;
+    }
+  }
+  .team {
+    padding-top: 40px;
+    &__inner {
+      display: block;
+    }
+    &__info {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    &__title {
+      text-align: center;
+    }
+    &__text {
+      line-height: inherit;
+      margin-bottom: 15px;
+    }
+    &__link {
+      padding: 10px 15px;
+      text-align: left;
+      &::after {
+        top: 16px;
+      }
+    }
   }
 }
 
@@ -336,6 +523,20 @@
     text-align: center;
     &__menu {
       justify-content: center;
+    }
+  }
+  .team {
+    &__list {
+      gap: 20px;
+    }
+    &__item-box {
+      position: static;
+      display: block;
+      text-align: center;
+    }
+    &__social {
+      justify-content: center;
+      margin-top: 10px;
     }
   }
 }
@@ -454,6 +655,44 @@
     }
     &__link {
       padding: 0 10px;
+    }
+  }
+  .page-top__title {
+    font-size: 24px;
+    line-height: 26px;
+  }
+  .mission {
+    padding: 20px 0;
+    &__experience {
+      width: 170px;
+      margin-bottom: 10px;
+    }
+    &__years {
+      font-size: 60px;
+    }
+    &__title {
+      font-size: 24px;
+      line-height: 26px;
+    }
+    &__achievements-list {
+      flex-wrap: wrap;
+    }
+    &__achievements-item {
+      &::after {
+        display: none;
+      }
+    }
+  }
+  .statistics {
+    padding: 20px 0;
+  }
+  .team {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+    &__photo {
+      width: 250px;
+      margin: 0 auto;
     }
   }
 }
