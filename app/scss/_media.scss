@@ -76,7 +76,21 @@
     height: 420px;
   }
   .articles {
-    padding-top: 60px;
+    padding: 60px 0;
+  }
+  .partners {
+    margin-top: 0;
+    padding: 60px 0;
+    &__list {
+      justify-content: center;
+      gap: 50px;
+    }
+  }
+  .footer-top {
+    padding: 60px 0;
+  }
+  .footer-bottom {
+    padding: 20px 0;
   }
 }
 
@@ -221,7 +235,20 @@
     }
   }
   .articles {
-    padding-top: 40px;
+    padding: 40px 0;
+  }
+  .partners {
+    padding: 40px 0;
+    &__list {
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+  }
+  .footer-top {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px 0;
   }
 }
 
@@ -286,6 +313,29 @@
     &__list {
       grid-template-columns: repeat(2, 1fr);
       gap: 10px;
+    }
+  }
+  .footer-top {
+    &__address,
+    &__phone {
+      margin-bottom: 0;
+    }
+    &__title {
+      margin: 10px 0 10px;
+    }
+    &__link {
+      line-height: inherit;
+    }
+    &__text {
+      margin-bottom: 10px;
+    }
+  }
+  .footer-bottom {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    &__menu {
+      justify-content: center;
     }
   }
 }
@@ -380,6 +430,30 @@
   .catalog {
     &__img {
       max-width: 70px;
+    }
+  }
+  .footer-top {
+    display: block;
+    text-align: center;
+    &__title {
+      margin: 0;
+    }
+    &__contact {
+      margin: 0 auto 15px;
+    }
+    &__nav {
+      margin-bottom: 15px;
+    }
+    &__item-form {
+      margin: 0 auto;
+    }
+  }
+  .footer-bottom {
+    &__copy {
+      line-height: 24px;
+    }
+    &__link {
+      padding: 0 10px;
     }
   }
 }
