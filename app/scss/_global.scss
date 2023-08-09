@@ -71,6 +71,7 @@ body {
 
 .pagination {
   display: flex;
+  flex-wrap: wrap;
   gap: 15px;
   @extend %rubik-400;
   color: $title;
@@ -80,6 +81,7 @@ body {
   }
   &__link {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     width: 50px;
