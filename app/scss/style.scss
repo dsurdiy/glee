@@ -1368,6 +1368,7 @@
   &__label-checkbox {
     position: relative;
     padding-left: 27px;
+    cursor: pointer;
   }
   &__input-hidden {
     @extend %checkbox-hidden;
