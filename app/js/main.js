@@ -34,6 +34,26 @@ $(function () {
   $(".related-products__list").slick({
     slidesToShow: 4,
     infinite: false,
+    responsive: [
+      {
+        breakpoint: 831,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 681,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 401,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
 
   $(".filter-price__input").ionRangeSlider({
