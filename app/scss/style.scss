@@ -933,6 +933,8 @@
   &__item-title {
     @extend %rubik-400;
     font-size: 36px;
+    line-height: 38px;
+    text-align: left;
     color: #333333;
     margin-bottom: 30px;
   }
@@ -950,6 +952,7 @@
     border: 1px solid $accent;
     background-color: #ffffff;
     color: $accent;
+    transition: all 0.3s;
     &::after {
       content: "";
       position: absolute;
@@ -958,6 +961,16 @@
       width: 22px;
       height: 9px;
       background-image: url("../images/icons/arrow-accent.svg");
+    }
+    &:hover,
+    &:focus {
+      min-width: 210px;
+      background-color: $accent;
+      color: #ffffff;
+      border-radius: 5px;
+      &::after {
+        background-image: url("../images/icons/arrow-right.svg");
+      }
     }
   }
   &__aside {
@@ -1056,6 +1069,13 @@
     margin-bottom: 20px;
     @extend %rubik-400;
   }
+  &__img-link {
+    max-width: 70px;
+  }
+  &__img {
+    min-width: 70px;
+    object-fit: cover;
+  }
   &__item-title {
     font-size: 14px;
     line-height: 20px;
@@ -1064,6 +1084,7 @@
   &__date {
     font-size: 12px;
     color: #9a9a9a;
+    text-transform: uppercase;
   }
 }
 
@@ -1075,11 +1096,19 @@
     margin-bottom: 60px;
     h2 {
       font-size: 36px;
+      line-height: 38px;
       color: #333333;
       margin-bottom: 25px;
+      text-align: left;
+    }
+    h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
     }
     h4 {
+      font-size: 18px;
       @extend %rubik-500;
+      margin: 15px 0;
     }
     p {
       margin: 20px 0;
