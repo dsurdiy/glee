@@ -297,6 +297,9 @@
     }
   }
   .top-slider {
+    &__inner {
+      gap: 30px;
+    }
     &__content {
       max-width: 350px;
     }
@@ -490,6 +493,9 @@
       max-width: 100%;
       margin: 0 auto;
       text-align: center;
+    }
+    &__link {
+      text-align: left;
     }
     .slick-slide img {
       display: none;

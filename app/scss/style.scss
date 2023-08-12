@@ -16,6 +16,13 @@
   }
 }
 
+.logo {
+  transition: transform 0.3s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
 .menu {
   &__btn {
     display: none;
@@ -29,10 +36,28 @@
     gap: 30px;
   }
   &__link {
+    position: relative;
     font-size: 15px;
     line-height: 12px;
     color: #436372;
     @extend %rubik-500;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0%;
+      height: 3px;
+      background-color: $accent;
+      transition: width 0.3s;
+    }
+    &:hover,
+    &:focus {
+      &::after {
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -44,6 +69,11 @@
     padding: 18px;
     border-radius: 50%;
     background-color: #edf1f4;
+    transition: background-color 0.3s;
+    &:hover,
+    &:focus {
+      background-color: $accent;
+    }
   }
   &__inner {
     position: relative;
@@ -67,6 +97,10 @@
   &__heart,
   &__basket {
     position: relative;
+    transition: transform 0.3s;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
   &__num {
     position: absolute;
@@ -85,6 +119,11 @@
     padding: 15px;
     border-radius: 50%;
     background-color: #a3bbc8;
+    transition: background-color 0.3s;
+    &:hover,
+    &:focus {
+      background-color: $bg;
+    }
   }
 }
 
@@ -184,7 +223,8 @@
   }
   &__item {
     display: flex !important;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
   }
   &__content {
     max-width: 415px;
@@ -212,6 +252,7 @@
     @extend %rubik-500;
     font-size: 15px;
     color: #ffffff;
+    transition: all 0.3s;
     &::after {
       content: "";
       position: absolute;
@@ -220,6 +261,12 @@
       width: 22px;
       height: 9px;
       background-image: url("../images/icons/arrow-right.svg");
+    }
+    &:hover,
+    &:focus {
+      background-color: #778c98;
+      width: 250px;
+      border-radius: 20px;
     }
   }
   .slick-dots {
@@ -422,6 +469,7 @@
     @extend %rubik-500;
     font-size: 15px;
     color: #436372;
+    transition: all 0.3s;
     &::after {
       content: "";
       position: absolute;
@@ -430,6 +478,11 @@
       width: 22px;
       height: 9px;
       background-image: url("../images/icons/arrow-grey.svg");
+    }
+    &:hover,
+    &:focus {
+      width: 210px;
+      background-color: #fff;
     }
   }
 }
@@ -470,6 +523,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  &__link {
+    transition: transform 0.6s;
+    &:hover,
+    &:focus {
+      transform: scale(1.5);
+    }
+  }
 }
 
 .articles {
@@ -477,6 +537,7 @@
   &__top {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     margin-bottom: 10px;
   }
   &__link {
@@ -485,6 +546,23 @@
     margin-top: 15px;
     @extend %dmsans-700;
     color: #262626;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0%;
+      height: 3px;
+      background-color: $accent;
+      transition: width 0.3s;
+    }
+    &:hover,
+    &:focus {
+      &::before {
+        width: 100%;
+      }
+    }
     &::after {
       content: "";
       position: absolute;
@@ -519,7 +597,6 @@
   &__info {
     display: flex;
     flex-direction: column;
-    min-height: 170px;
     padding: 28px 28px 10px;
     border-radius: 5px;
     background-color: #ffffff;
@@ -529,6 +606,12 @@
     font-size: 18px;
     color: #262626;
     margin-bottom: 15px;
+  }
+  &__title-link {
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
   }
   &__info-box {
     display: flex;
