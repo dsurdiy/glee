@@ -419,10 +419,14 @@
     }
   }
   .team {
+    &__inner {
+      align-items: center;
+    }
     &__list {
-      gap: 80px 30px;
+      gap: 30px;
     }
     &__item-box {
+      position: static;
       padding: 10px;
     }
     &__item-title {

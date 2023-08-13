@@ -757,6 +757,10 @@
     align-items: center;
     @extend %dmsans-700;
     color: $title;
+    transition: transform 0.6s;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
   &__img-box {
     position: relative;
@@ -816,6 +820,7 @@
     font-size: 15px;
     color: #fff;
     border-radius: 5px;
+    transition: all 0.3s;
     &::after {
       content: "";
       position: absolute;
@@ -824,6 +829,16 @@
       width: 22px;
       height: 9px;
       background-image: url("../images/icons/arrow-right.svg");
+    }
+    &:hover,
+    &:focus {
+      width: 190px;
+      background-color: #fff;
+      color: $accent;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      &::after {
+        background-image: url("../images/icons/arrow-accent.svg");
+      }
     }
   }
   &__list {
@@ -868,6 +883,11 @@
     height: 40px;
     border-radius: 50%;
     background-color: #f6f6f6;
+    transition: background-color 0.3s;
+    &:hover,
+    &:focus {
+      background-color: $accent;
+    }
   }
 }
 
