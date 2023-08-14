@@ -1,6 +1,13 @@
 $(function () {
-  $(".menu__btn").on("click", function () {
-    $(".menu__list").toggleClass("menu__list--active");
+  $(window).on("scroll", function () {
+    scrollY > 0
+      ? $(".header").addClass("scroll")
+      : $(".header").removeClass("scroll");
+  });
+
+  $(".header__burger").on("click", function () {
+    $(".header__burger, .menu").toggleClass("active");
+    $("body").toggleClass("lock");
   });
 
   $(".top-slider__inner").slick({

@@ -5,7 +5,30 @@
 @import "global";
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transition: background-color 0.3s;
+  }
+  &.scroll::before {
+    background-color: $secondary-bg;
+  }
+  &.scroll .header__inner {
+    padding: 20px 15px;
+  }
   &__inner {
+    position: relative;
     max-width: 1800px;
     margin: 0 auto;
     padding: 45px 15px 40px;
@@ -13,10 +36,16 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    transition: all 1s;
+  }
+  &__burger {
+    display: none;
   }
 }
 
 .logo {
+  position: relative;
+  z-index: 3;
   transition: transform 0.3s;
   &:hover {
     transform: scale(1.1);
@@ -32,6 +61,8 @@
     cursor: pointer;
   }
   &__list {
+    position: relative;
+    z-index: 3;
     display: flex;
     gap: 30px;
   }
@@ -62,6 +93,8 @@
 }
 
 .user-nav {
+  position: relative;
+  z-index: 3;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -524,6 +557,7 @@
   justify-content: center;
   max-width: 1920px;
   height: 500px;
+  margin: 0 auto;
   background-image: url("../images/video-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
